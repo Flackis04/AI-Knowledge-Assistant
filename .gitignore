@@ -1,0 +1,7 @@
+.codex
+.env
+.vscode/
+node_modules/
+npm-debug.log*
+data/
+.DS_Store

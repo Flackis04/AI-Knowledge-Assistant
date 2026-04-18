@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Kunskapskarta">
+  <rect width="128" height="128" rx="18" fill="#087f68"/>
+  <path d="M30 34h42c9 0 16 7 16 16v48H46c-9 0-16-7-16-16V34Z" fill="#ffffff"/>
+  <path d="M40 47h38M40 59h28M40 71h34" stroke="#087f68" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="90" cy="40" r="11" fill="#e6b84f"/>
+  <circle cx="93" cy="84" r="14" fill="#d44f3a"/>
+  <path d="M83 48 72 62M83 78 72 70" stroke="#202423" stroke-width="5" stroke-linecap="round"/>
+</svg>

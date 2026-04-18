@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Knowledge Assistant</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <img class="brand-mark" src="/assets/knowledge-map.svg" alt="">
+        <div>
+          <p class="eyebrow">Lokalt kunskapsstöd</p>
+          <h1>AI Knowledge Assistant</h1>
+        </div>
+      </header>
+
+      <section class="workspace" aria-label="Kunskapsassistent">
+        <form class="panel upload-panel" id="uploadForm">
+          <div class="panel-heading">
+            <h2>Ladda upp kunskap</h2>
+            <p>PDF, textfil eller inklistrad text sparas lokalt.</p>
+          </div>
+
+          <label>
+            Titel
+            <input id="titleInput" name="title" type="text" maxlength="120" placeholder="Exempel: Kursanteckningar vecka 1">
+          </label>
+
+          <label>
+            Text eller PDF
+            <input id="documentInput" name="document" type="file" accept=".txt,.md,.pdf,text/plain,text/markdown,application/pdf">
+          </label>
+
+          <label>
+            Klistra in text
+            <textarea id="textInput" name="text" rows="8" placeholder="Klistra in text här om du inte laddar upp en fil."></textarea>
+          </label>
+
+          <button type="submit">Spara innehåll</button>
+          <p class="status" id="uploadStatus" role="status"></p>
+        </form>
+
+        <section class="panel ask-panel">
+          <div class="panel-heading">
+            <h2>Fråga materialet</h2>
+            <p>Svaret bygger på de mest relevanta textdelarna.</p>
+          </div>
+
+          <form id="askForm" class="ask-form">
+            <label>
+              Fråga
+              <textarea id="questionInput" rows="4" required placeholder="Vad säger materialet om ...?"></textarea>
+            </label>
+            <button type="submit">Ställ fråga</button>
+          </form>
+
+          <div class="answer-block" aria-live="polite">
+            <h3>Svar</h3>
+            <div id="answerOutput" class="answer-text">Ladda upp material och ställ en fråga.</div>
+          </div>
+
+          <div class="source-block">
+            <h3>Källor</h3>
+            <div id="sourcesOutput" class="sources-list"></div>
+          </div>
+        </section>
+
+        <aside class="panel document-panel">
+          <div class="panel-heading">
+            <h2>Sparat innehåll</h2>
+            <p>Dokument som används vid sökning.</p>
+          </div>
+          <div id="documentList" class="document-list"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
